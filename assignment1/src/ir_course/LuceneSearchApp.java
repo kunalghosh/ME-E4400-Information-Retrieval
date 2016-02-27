@@ -11,18 +11,13 @@ package ir_course;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Paths;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TimeZone;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -64,14 +59,9 @@ public class LuceneSearchApp {
   public static final String PUB_DATE = "pubDate";
   // Search results
   private ScoreDoc[] hits;
-  // Date format being used
-  private static SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-  // Formatter with TimeZone
-  private static SimpleDateFormat tzDt = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
-
 
   public LuceneSearchApp() {
-    tzDt.setTimeZone(TimeZone.getTimeZone("UTC"));
+
   }
 
   public void index(IndexWriter writer, List<RssFeedDocument> docs) throws IOException {
@@ -81,29 +71,9 @@ public class LuceneSearchApp {
       Document luceneDoc = new Document();
       luceneDoc.add(new TextField(TITLE, doc.getTitle(), Field.Store.YES));
       luceneDoc.add(new TextField(DESC, new StringReader(doc.getDescription())));
-      // luceneDoc.add(new LongField(PUB_DATE, doc.getPubDate().getTime(), Field.Store.NO));
-      // luceneDoc.add(new LongField(PUB_DATE, dt.parse(dt.format(doc.getPubDate())).getTime(),
-      System.out
-          .println(
-              "Old : " + doc.getPubDate().toInstant().toString() + " +2 : "
-                  + doc.getPubDate().toInstant().plus(2, ChronoUnit.HOURS).toString() + " Trunc : "
-                  + doc.getPubDate().toInstant().truncatedTo(ChronoUnit.DAYS) + " Final : "
-                  + doc.getPubDate().toInstant().plus(2, ChronoUnit.HOURS)
-                      .truncatedTo(ChronoUnit.DAYS)
-                  + " - " + LocalDate.from(doc.getPubDate().toInstant().atZone(ZoneId.of("UTC")))
-                      .toEpochDay()
-                  + " Title : " + doc.getTitle());
-                  // luceneDoc.add(new LongField(PUB_DATE, doc.getPubDate().toInstant().plus(2,
-                  // ChronoUnit.HOURS)
-                  // .truncatedTo(ChronoUnit.DAYS).toEpochMilli(), Field.Store.NO));
-
-      // luceneDoc.add(new LongField(PUB_DATE,
-      // doc.getPubDate().toInstant().truncatedTo(ChronoUnit.DAYS).toEpochMilli(),
-      // Field.Store.NO));
       luceneDoc.add(new LongField(PUB_DATE,
           LocalDate.from(doc.getPubDate().toInstant().atZone(ZoneId.of("UTC"))).toEpochDay(),
           Field.Store.NO));
-
       writer.addDocument(luceneDoc);
     }
   }
@@ -127,7 +97,6 @@ public class LuceneSearchApp {
     List<String> results = new LinkedList<String>();
 
     // implement the Lucene search here
-    // QueryBuilder builder = new QueryBuilder(analyzer);
     BooleanQuery.Builder boolQuery = new BooleanQuery.Builder();
     getTermQueryFromList(inTitle, TITLE).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST);
@@ -147,23 +116,10 @@ public class LuceneSearchApp {
     Long lowerTerm = null;
     Long upperTerm = null;
     if (startDate != null) {
-      // lowerTerm = new
-      // BytesRef(Objects.toString(LocalDate.parse(startDate,DateTimeFormatter.ISO_LOCAL_DATE).toEpochDay()));
       lowerTerm = toFinnishDate(startDate);
     }
     if (endDate != null) {
-
-      // ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime, ZoneId.of("Helsinki"));
-      // Instant instant = zonedDateTime.toInstant();
-      // Long millis = instant.toEpochMilli();
-      // upperTerm = new BytesRef(toFinnishDate(endDate));;
       upperTerm = toFinnishDate(endDate);
-      // DateTimeFormatter format =
-      // LocalDate.parse(endDate,DateTimeFormatter.ISO_LOCAL_DATE.withZone(new
-      // DateTimeZone("UTC+02:00")));
-      // String epochDate = new Date(date.toString());
-      // String temp = Objects.toString(epochDate);
-      // upperTerm = new BytesRef(temp);
     }
     NumericRangeQuery<Long> dateQuery =
         NumericRangeQuery.newLongRange(PUB_DATE, lowerTerm, upperTerm, includeLower, includeUpper);
@@ -171,7 +127,6 @@ public class LuceneSearchApp {
     boolQuery.add(dateQuery, BooleanClause.Occur.MUST);
     BooleanQuery q = boolQuery.build();
     // The search cannot have more than the number of docs in index (reader.numDocs)
-    // System.out.println(q.toString());
     hits = searcher.search(q, reader.numDocs()).scoreDocs;
     for (ScoreDoc hit : hits) {
       results.add(searcher.doc(hit.doc).get(TITLE));
@@ -180,37 +135,9 @@ public class LuceneSearchApp {
   }
 
   private Long toFinnishDate(String isoDateStr) {
-    Long dateMillis = -1L;
     LocalDate localDate = LocalDate.parse(isoDateStr, DateTimeFormatter.ISO_DATE);
-    try {
-      Instant instant = tzDt.parse(tzDt.format(dt.parse(isoDateStr))).toInstant();
-      dateMillis = instant.toEpochMilli();
-      System.out.println(
-          "Finnish Time : " + instant.toString() + " LocalDate : " + localDate.toEpochDay());
-    } catch (ParseException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    // return dateMillis;
     return localDate.toEpochDay();
   }
-
-  // private Long toFinnishDate(String startDate) {
-  //
-  // Date date = null;
-  // try {
-  // date = dt.parse(startDate);
-  // } catch (ParseException e) {
-  // // TODO Auto-generated catch block
-  // e.printStackTrace();
-  // }
-  // Calendar cal = new GregorianCalendar();
-  // cal.setTime(date);
-  // // cal.add(Calendar.HOUR_OF_DAY, 2);
-  // // String dateString = Objects.toString(cal.getTime().getTime());
-  // Long dateString = cal.getTime().getTime();
-  // return dateString;
-  // }
 
   public void printQuery(List<String> inTitle, List<String> notInTitle, List<String> inDescription,
       List<String> notInDescription, String startDate, String endDate) {
