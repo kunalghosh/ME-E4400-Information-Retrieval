@@ -1,12 +1,14 @@
 /*
- * Skeleton class for the Lucene search program implementation - By Jouni and Esko
- * Index and Search implementation - By Kunal
+ * Skeleton class for the Lucene search program implementation - By Jouni and Esko 
  * 
  * Created on 2011-12-21 * Jouni Tuominen <jouni.tuominen@aalto.fi>
  * 
  * Modified on 2015-30-12 * Esko Ikkala <esko.ikkala@aalto.fi>
  * 
  * Modified on 2015-27-02 * Kunal Ghosh <kunal.ghosh@aalto.fi>
+ * - Added Implementations for Methods Index(), Search()
+ * - Added Methods GetTermQueryFromList() and toISOEpochDay()
+ *
  */
 package ir_course;
 
@@ -65,7 +67,7 @@ public class LuceneSearchApp {
   public static final String DESC = "description";
   // Publish Date string
   public static final String PUB_DATE = "pubDate";
-  // Search result doc numbers 
+  // Search result doc numbers
   private ScoreDoc[] hits;
 
   public LuceneSearchApp() throws IOException {
@@ -85,20 +87,30 @@ public class LuceneSearchApp {
   public void index(List<RssFeedDocument> docs) throws IOException {
     // implement the Lucene indexing here
     for (RssFeedDocument doc : docs) {
+      // Each RSS Feed Document goes into a luceneDocument
       Document luceneDoc = new Document();
+      // We add the Title(tokenized), Description(tokenized) and PublicationDate(Days from Epoch) as
+      // Fields in the luceneDocument. NOTE : The title field is stored since we want to retrieve it
+      // later.
       luceneDoc.add(new TextField(TITLE, doc.getTitle(), Field.Store.YES));
       luceneDoc.add(new TextField(DESC, new StringReader(doc.getDescription())));
       luceneDoc.add(new LongField(PUB_DATE,
           LocalDate.from(doc.getPubDate().toInstant().atZone(ZoneId.of("UTC"))).toEpochDay(),
           Field.Store.NO));
+      // Write the lucene document to the Index
       writer.addDocument(luceneDoc);
     }
+    // Closing the Index is Important
     writer.close();
+    // Open the directory and create the searcher which will be used in the search method.s
     reader = DirectoryReader.open(dir);
     searcher = new IndexSearcher(reader);
   }
 
   private List<Query> getTermQueryFromList(List<String> terms, String field) {
+    // This method just takes lists of terms as a String and a Field name
+    // and creates Term Queries from them. Which is mainly used in constructing the
+    // Query.
     List<Query> queries = new ArrayList<Query>();
     if (terms != null) {
       for (String term : terms) {
@@ -117,25 +129,30 @@ public class LuceneSearchApp {
     List<String> results = new LinkedList<String>();
 
     // implement the Lucene search here
+    // Use a boolean Query to implement multiple queries conjuncted with AND
     BooleanQuery.Builder boolQuery = new BooleanQuery.Builder();
+    // Add the title Queries to the Boolen Query
     getTermQueryFromList(inTitle, TITLE).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST);
     });
     getTermQueryFromList(notInTitle, TITLE).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST_NOT);
     });
+    // Add the Description Queries to the Boolean Query
     getTermQueryFromList(inDescription, DESC).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST);
     });
     getTermQueryFromList(notInDescription, DESC).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST_NOT);
     });
-    
+    // Construct and add the Date Range Query
     // Always include the lower and upper range in date search.
+    // If the actual dates a null, it just ends up searching everything.
     boolean includeLower = true;
     boolean includeUpper = true;
     Long lowerTerm = null;
     Long upperTerm = null;
+    // If start and End Dates are not null get their corresponding day count since epoch
     if (startDate != null) {
       lowerTerm = toISOEpochDay(startDate);
     }
@@ -144,18 +161,22 @@ public class LuceneSearchApp {
     }
     NumericRangeQuery<Long> dateQuery =
         NumericRangeQuery.newLongRange(PUB_DATE, lowerTerm, upperTerm, includeLower, includeUpper);
-
     boolQuery.add(dateQuery, BooleanClause.Occur.MUST);
+    // Builds the final Query that goes into the searcher.
     BooleanQuery q = boolQuery.build();
     // The search cannot have more than the number of docs in index (reader.numDocs)
     hits = searcher.search(q, reader.numDocs()).scoreDocs;
     for (ScoreDoc hit : hits) {
+      // hits just give the document number matching the search
+      // retrieve the corresponding document and its title with the searcher
       results.add(searcher.doc(hit.doc).get(TITLE));
     }
     return results;
   }
 
   private Long toISOEpochDay(String isoDateStr) {
+    // Convert the date string to Number of Days Since Epoch So that range searches can be done
+    // Uses ISO_DATE format hence the name
     LocalDate localDate = LocalDate.parse(isoDateStr, DateTimeFormatter.ISO_DATE);
     return localDate.toEpochDay();
   }
