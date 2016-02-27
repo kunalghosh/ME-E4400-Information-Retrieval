@@ -1,10 +1,12 @@
 /*
- * Skeleton class for the Lucene search program implementation
- *
+ * Skeleton class for the Lucene search program implementation - By Jouni and Esko
+ * Index and Search implementation - By Kunal
+ * 
  * Created on 2011-12-21 * Jouni Tuominen <jouni.tuominen@aalto.fi>
  * 
  * Modified on 2015-30-12 * Esko Ikkala <esko.ikkala@aalto.fi>
  * 
+ * Modified on 2015-27-02 * Kunal Ghosh <kunal.ghosh@aalto.fi>
  */
 package ir_course;
 
@@ -49,6 +51,12 @@ public class LuceneSearchApp {
   private static IndexReader reader;
   // Index searcher
   private static IndexSearcher searcher;
+  // Index Writer Config
+  private static IndexWriterConfig iwc;
+  // Index Writer
+  private static IndexWriter writer;
+  // Index Directory
+  private static Directory dir;
   // Analyzer
   private static Analyzer analyzer;
   // Title String
@@ -57,15 +65,24 @@ public class LuceneSearchApp {
   public static final String DESC = "description";
   // Publish Date string
   public static final String PUB_DATE = "pubDate";
-  // Search results
+  // Search result doc numbers 
   private ScoreDoc[] hits;
 
-  public LuceneSearchApp() {
+  public LuceneSearchApp() throws IOException {
+    analyzer = new StandardAnalyzer();
+    iwc = new IndexWriterConfig(analyzer);
+    iwc.setOpenMode(OpenMode.CREATE_OR_APPEND);
 
+    // Assuming the directory where index is stored is the PWD always.
+    indexDir = Paths.get("").toAbsolutePath().toString();
+
+    System.out.println("Indexing in " + indexDir + " directory");
+    // Directory dir = NIOFSDirectory.open(Paths.get(indexDir));
+    dir = new RAMDirectory();
+    writer = new IndexWriter(dir, iwc);
   }
 
-  public void index(IndexWriter writer, List<RssFeedDocument> docs) throws IOException {
-
+  public void index(List<RssFeedDocument> docs) throws IOException {
     // implement the Lucene indexing here
     for (RssFeedDocument doc : docs) {
       Document luceneDoc = new Document();
@@ -76,6 +93,9 @@ public class LuceneSearchApp {
           Field.Store.NO));
       writer.addDocument(luceneDoc);
     }
+    writer.close();
+    reader = DirectoryReader.open(dir);
+    searcher = new IndexSearcher(reader);
   }
 
   private List<Query> getTermQueryFromList(List<String> terms, String field) {
@@ -110,16 +130,17 @@ public class LuceneSearchApp {
     getTermQueryFromList(notInDescription, DESC).forEach((query) -> {
       boolQuery.add(query, BooleanClause.Occur.MUST_NOT);
     });
-
+    
+    // Always include the lower and upper range in date search.
     boolean includeLower = true;
     boolean includeUpper = true;
     Long lowerTerm = null;
     Long upperTerm = null;
     if (startDate != null) {
-      lowerTerm = toFinnishDate(startDate);
+      lowerTerm = toISOEpochDay(startDate);
     }
     if (endDate != null) {
-      upperTerm = toFinnishDate(endDate);
+      upperTerm = toISOEpochDay(endDate);
     }
     NumericRangeQuery<Long> dateQuery =
         NumericRangeQuery.newLongRange(PUB_DATE, lowerTerm, upperTerm, includeLower, includeUpper);
@@ -134,7 +155,7 @@ public class LuceneSearchApp {
     return results;
   }
 
-  private Long toFinnishDate(String isoDateStr) {
+  private Long toISOEpochDay(String isoDateStr) {
     LocalDate localDate = LocalDate.parse(isoDateStr, DateTimeFormatter.ISO_DATE);
     return localDate.toEpochDay();
   }
@@ -185,30 +206,12 @@ public class LuceneSearchApp {
   public static void main(String[] args) throws IOException {
     if (args.length > 0) {
       LuceneSearchApp engine = new LuceneSearchApp();
-      // [ADDITION] Start Lucene specific initializations
-      Analyzer analyzer = new StandardAnalyzer();
-      IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
-      iwc.setOpenMode(OpenMode.CREATE_OR_APPEND);
-
-      // Assuming the directory where index is stored is the PWD always.
-      indexDir = Paths.get("").toAbsolutePath().toString();
-
-      System.out.println("Indexing in " + indexDir + " directory");
-      // Directory dir = NIOFSDirectory.open(Paths.get(indexDir));
-      Directory dir = new RAMDirectory();
-      IndexWriter writer = new IndexWriter(dir, iwc);
-      // [END ADDITION]
 
       RssFeedParser parser = new RssFeedParser();
       parser.parse(args[0]);
       List<RssFeedDocument> docs = parser.getDocuments();
 
-      engine.index(writer, docs);
-      writer.close();
-      // [ADDITION] Creating the reader and searcher
-      reader = DirectoryReader.open(dir);
-      searcher = new IndexSearcher(reader);
-      // [END ADDITION]
+      engine.index(docs);
 
       List<String> inTitle;
       List<String> notInTitle;
