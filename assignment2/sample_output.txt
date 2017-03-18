@@ -1,0 +1,578 @@
+----------------------------------------------------------------------
+Processing Query : information retrieval system recommendation
+----------------------------------------------------------------------
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF]
+abstract_text:inform abstract_text:retriev abstract_text:system abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6871337522459762, 11 Point Precision Recall = [0.803921568627451, 0.803921568627451, 0.803921568627451, 0.7230769230769231, 0.7073170731707317, 0.6886792452830188, 0.6869565217391305, 0.6283783783783784, 0.6086956521739131, 0.5854922279792746, 0.5786802030456852]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 3. [1] .On the role of trust in collaborative Web search
+ 4. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 5. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 6. [1] .Personalized peer filtering for a dynamic information push
+ 7. [1] .A contextual user model for web personalization
+ 8. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 9. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 10. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:information abstract_text:retrieval abstract_text:system abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7066116259902485, 11 Point Precision Recall = [0.8260869565217391, 0.8260869565217391, 0.8260869565217391, 0.7540983606557377, 0.73, 0.73, 0.6528925619834711, 0.647887323943662, 0.6265060240963856, 0.601063829787234, 0.59375]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .Personalized peer filtering for a dynamic information push
+ 3. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 4. [1] .On the role of trust in collaborative Web search
+ 5. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 6. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 7. [1] .A contextual user model for web personalization
+ 8. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 9. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 10. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25]
+abstract_text:inform abstract_text:retriev abstract_text:system abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6896614460739058, 11 Point Precision Recall = [0.8076923076923077, 0.7948717948717948, 0.7872340425531915, 0.7419354838709677, 0.7, 0.696969696969697, 0.6810344827586207, 0.6413793103448275, 0.6091954022988506, 0.5854922279792746, 0.5786802030456852]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 4. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 5. [1] .On the role of trust in collaborative Web search
+ 6. [1] .Modeling information sources as integrals for effective and efficient source selection
+ 7. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 8. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 9. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25]
+abstract_text:information abstract_text:retrieval abstract_text:system abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7134722981665701, 11 Point Precision Recall = [0.8571428571428571, 0.8275862068965517, 0.8181818181818182, 0.7580645161290323, 0.7047619047619048, 0.7047619047619048, 0.6538461538461539, 0.6538461538461539, 0.6538461538461539, 0.6042780748663101, 0.59375]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 4. [1] .On the role of trust in collaborative Web search
+ 5. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+ 6. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+ 7. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 8. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 9. [1] .Knowledge reuse for software reuse
+ 10. [1] .Personalized peer filtering for a dynamic information push
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF]
+abstract_text:inform abstract_text:retriev abstract_text:system abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6951043656342594, 11 Point Precision Recall = [0.803921568627451, 0.803921568627451, 0.803921568627451, 0.7538461538461538, 0.7088607594936709, 0.7058823529411765, 0.6779661016949152, 0.6388888888888888, 0.6079545454545454, 0.5854922279792746, 0.5786802030456852]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 3. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 4. [1] .On the role of trust in collaborative Web search
+ 5. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 6. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 7. [1] .Knowledge reuse for software reuse
+ 8. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 9. [1] .Mobile location-based information pushing system
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:information abstract_text:retrieval abstract_text:system abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7145348303152347, 11 Point Precision Recall = [0.8235294117647058, 0.8235294117647058, 0.8222222222222222, 0.7627118644067796, 0.7272727272727273, 0.7272727272727273, 0.6810344827586207, 0.6474358974358975, 0.6296296296296297, 0.601063829787234, 0.5906735751295337]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [1] .On the role of trust in collaborative Web search
+ 4. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 5. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 6. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 7. [1] .Knowledge reuse for software reuse
+ 8. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 9. [1] .Mobile location-based information pushing system
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25]
+abstract_text:inform abstract_text:retriev abstract_text:system abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6927681585814794, 11 Point Precision Recall = [0.8095238095238095, 0.7872340425531915, 0.7872340425531915, 0.746031746031746, 0.7058823529411765, 0.6936936936936937, 0.6810344827586207, 0.6503496503496503, 0.6098901098901099, 0.5854922279792746, 0.5816326530612245]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 4. [1] .Knowledge reuse for software reuse
+ 5. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 6. [1] .On the role of trust in collaborative Web search
+ 7. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 8. [1] .Modeling information sources as integrals for effective and efficient source selection
+ 9. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25]
+abstract_text:information abstract_text:retrieval abstract_text:system abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7141653467725864, 11 Point Precision Recall = [0.8461538461538461, 0.8181818181818182, 0.8181818181818182, 0.7627118644067796, 0.7037037037037037, 0.6981132075471698, 0.6583333333333333, 0.6560509554140127, 0.6560509554140127, 0.6042780748663101, 0.5906735751295337]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [1] .Knowledge reuse for software reuse
+ 4. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 5. [1] .On the role of trust in collaborative Web search
+ 6. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+ 7. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+ 8. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 9. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 10. [1] .Large scale rich media information search
+----------------------------------------------------------------------
+Processing Query : recommender systems information retrieval recommendation
+----------------------------------------------------------------------
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF]
+abstract_text:recommend abstract_text:system abstract_text:inform abstract_text:retriev abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.705721754031333, 11 Point Precision Recall = [0.8461538461538461, 0.8085106382978723, 0.8085106382978723, 0.7666666666666667, 0.7093023255813954, 0.6792452830188679, 0.6774193548387096, 0.6388888888888888, 0.6098901098901099, 0.5854922279792746, 0.5846153846153846]
+Printing top 10 results:
+ 1. [1] .On the role of trust in collaborative Web search
+ 2. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 3. [0] .Machine learning for information retrieval
+ 4. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 5. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 6. [1] .Personalized peer filtering for a dynamic information push
+ 7. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 8. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 9. [1] .A contextual user model for web personalization
+ 10. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:recommender abstract_text:system abstract_text:information abstract_text:retrieval abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7159040235393377, 11 Point Precision Recall = [0.7894736842105263, 0.7857142857142857, 0.7857142857142857, 0.7857142857142857, 0.7671232876712328, 0.6923076923076923, 0.656, 0.6387096774193548, 0.6219512195121951, 0.5916230366492147, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 2. [1] .On the role of trust in collaborative Web search
+ 3. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 4. [0] .MARS: a MultilAnguage Recommender System
+ 5. [1] .MARS: a MultilAnguage Recommender System
+ 6. [1] .Recommender Systems Research: A Connection-Centric Survey
+ 7. [1] .Exploring folksonomy and cooking procedures to boost cooking recipe recommendation
+ 8. [1] .Comparison-Based Recommendation
+ 9. [0] .Machine learning for information retrieval
+ 10. [1] .Novelty and Diversity in Top-N Recommendation -- Analysis and Evaluation
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25]
+abstract_text:recommend abstract_text:system abstract_text:inform abstract_text:retriev abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6914274959118589, 11 Point Precision Recall = [0.8076923076923077, 0.7948717948717948, 0.7872340425531915, 0.7419354838709677, 0.696969696969697, 0.696969696969697, 0.6869565217391305, 0.6453900709219859, 0.6107784431137725, 0.5947368421052631, 0.5876288659793815]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 4. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 5. [1] .On the role of trust in collaborative Web search
+ 6. [1] .Modeling information sources as integrals for effective and efficient source selection
+ 7. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 8. [1] .An intelligent system integrated with fuzzy ontology for product recommendation and retrieval
+ 9. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25]
+abstract_text:recommender abstract_text:system abstract_text:information abstract_text:retrieval abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7121077065432327, 11 Point Precision Recall = [0.8260869565217391, 0.8222222222222222, 0.8222222222222222, 0.7341772151898734, 0.7341772151898734, 0.7083333333333334, 0.6428571428571429, 0.6233766233766234, 0.6219512195121951, 0.5978835978835979, 0.59375]
+Printing top 10 results:
+ 1. [1] .On the role of trust in collaborative Web search
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 4. [0] .Machine learning for information retrieval
+ 5. [0] .MARS: a MultilAnguage Recommender System
+ 6. [1] .MARS: a MultilAnguage Recommender System
+ 7. [1] .Comparison-Based Recommendation
+ 8. [1] .Novelty and Diversity in Top-N Recommendation -- Analysis and Evaluation
+ 9. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 10. [1] .Vizier: a generic and multidimensional agent-based recommendation framework
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF]
+abstract_text:recommend abstract_text:system abstract_text:inform abstract_text:retriev abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7110757355113524, 11 Point Precision Recall = [0.8235294117647058, 0.8163265306122449, 0.8163265306122449, 0.75, 0.717948717948718, 0.7, 0.6974789915966386, 0.6388888888888888, 0.6094674556213018, 0.5854922279792746, 0.5816326530612245]
+Printing top 10 results:
+ 1. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 2. [0] .Machine learning for information retrieval
+ 3. [1] .On the role of trust in collaborative Web search
+ 4. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 5. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 6. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 7. [1] .Knowledge reuse for software reuse
+ 8. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 9. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+ 10. [1] .Mobile location-based information pushing system
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:recommender abstract_text:system abstract_text:information abstract_text:retrieval abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7203600563554342, 11 Point Precision Recall = [0.8260869565217391, 0.782608695652174, 0.782608695652174, 0.7741935483870968, 0.7466666666666667, 0.7142857142857143, 0.6638655462184874, 0.6442953020134228, 0.6219512195121951, 0.5885416666666666, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 2. [1] .On the role of trust in collaborative Web search
+ 3. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 4. [0] .MARS: a MultilAnguage Recommender System
+ 5. [1] .MARS: a MultilAnguage Recommender System
+ 6. [1] .Comparison-Based Recommendation
+ 7. [0] .Machine learning for information retrieval
+ 8. [1] .Recommender Systems Research: A Connection-Centric Survey
+ 9. [0] .Predicting performance in recommender systems
+ 10. [1] .Novelty and Diversity in Top-N Recommendation -- Analysis and Evaluation
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25]
+abstract_text:recommend abstract_text:system abstract_text:inform abstract_text:retriev abstract_text:recommend
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.6934395052976459, 11 Point Precision Recall = [0.8095238095238095, 0.7872340425531915, 0.7872340425531915, 0.746031746031746, 0.6987951807228916, 0.6936936936936937, 0.6869565217391305, 0.6433566433566433, 0.6130952380952381, 0.5947368421052631, 0.5876288659793815]
+Printing top 10 results:
+ 1. [0] .Machine learning for information retrieval
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [0] .Designing consumer health information systems: what do user-generated questions tell us?
+ 4. [1] .Knowledge reuse for software reuse
+ 5. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+ 6. [1] .On the role of trust in collaborative Web search
+ 7. [0] .Establishing the utility of non-text search for news video retrieval with real world users
+ 8. [1] .Modeling information sources as integrals for effective and efficient source selection
+ 9. [1] .An eye-tracking-based approach to facilitate interactive video search
+ 10. [1] .Context-aware recommendations on mobile services: the m:Ciudad approach
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25]
+abstract_text:recommender abstract_text:system abstract_text:information abstract_text:retrieval abstract_text:recommendation
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.7148005726838144, 11 Point Precision Recall = [0.8333333333333334, 0.8235294117647058, 0.8222222222222222, 0.7333333333333333, 0.7272727272727273, 0.7070707070707071, 0.6532258064516129, 0.6257668711656442, 0.6257668711656442, 0.601063829787234, 0.59375]
+Printing top 10 results:
+ 1. [1] .On the role of trust in collaborative Web search
+ 2. [1] .A framework for the evaluation of adaptive IR systems through implicit recommendation
+ 3. [1] .Web-Based Recommender Systems and User Needs --the Comprehensive View
+ 4. [0] .Machine learning for information retrieval
+ 5. [0] .MARS: a MultilAnguage Recommender System
+ 6. [1] .MARS: a MultilAnguage Recommender System
+ 7. [1] .Comparison-Based Recommendation
+ 8. [1] .Knowledge reuse for software reuse
+ 9. [1] .Novelty and Diversity in Top-N Recommendation -- Analysis and Evaluation
+ 10. [1] .Effects of Usage-Based Feedback on Video Retrieval: A Simulation-Based Study
+----------------------------------------------------------------------
+Processing Query : systems collaborative filtering recommendation
+----------------------------------------------------------------------
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF]
+abstract_text:system abstract_text:collabor abstract_text:filter abstract_text:recommend
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8114834765729448, 11 Point Precision Recall = [1.0, 0.9565217391304348, 0.918918918918919, 0.8846153846153846, 0.821917808219178, 0.8095238095238095, 0.7745098039215687, 0.6408450704225352, 0.6280487804878049, 0.5916230366492147, 0.5728643216080402]
+Printing top 10 results:
+ 1. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 2. [1] .Using a trust network to improve top-N recommendation
+ 3. [1] .Distributed collaborative filtering with domain specialization
+ 4. [1] .CARES: a ranking-oriented CADAL recommender system
+ 5. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 6. [1] .Google news personalization: scalable online collaborative filtering
+ 7. [1] .A unified approach to building hybrid recommender systems
+ 8. [1] .UTA-Rec: a recommender system based on multiple criteria analysis
+ 9. [1] .UTA-Rec: a recommender system based on multiple criteria analysis
+ 10. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:system abstract_text:collaborative abstract_text:filtering abstract_text:recommendation
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8209074808945546, 11 Point Precision Recall = [1.0, 0.9473684210526315, 0.9473684210526315, 0.896551724137931, 0.8714285714285714, 0.8313253012048193, 0.7117117117117117, 0.6597222222222222, 0.6358024691358025, 0.5794871794871795, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 2. [1] .Using a trust network to improve top-N recommendation
+ 3. [1] .Google news personalization: scalable online collaborative filtering
+ 4. [1] .Distributed collaborative filtering with domain specialization
+ 5. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 6. [1] .A unified approach to building hybrid recommender systems
+ 7. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 8. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 9. [1] .CARES: a ranking-oriented CADAL recommender system
+ 10. [1] .Recommendation based on object typicality
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25]
+abstract_text:system abstract_text:collabor abstract_text:filter abstract_text:recommend
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.81051725962776, 11 Point Precision Recall = [1.0, 0.9565217391304348, 0.8936170212765957, 0.8867924528301887, 0.8115942028985508, 0.7717391304347826, 0.75, 0.6946564885496184, 0.6257668711656442, 0.5885416666666666, 0.5728643216080402]
+Printing top 10 results:
+ 1. [1] .Using a trust network to improve top-N recommendation
+ 2. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 3. [1] .Distributed collaborative filtering with domain specialization
+ 4. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 5. [1] .Google news personalization: scalable online collaborative filtering
+ 6. [1] .Analysis of a low-dimensional linear model under recommendation attacks
+ 7. [1] .Improved recommendation based on collaborative tagging behaviors
+ 8. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 9. [1] .Unified relevance models for rating prediction in collaborative filtering
+ 10. [1] .Unified relevance models for rating prediction in collaborative filtering
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25]
+abstract_text:system abstract_text:collaborative abstract_text:filtering abstract_text:recommendation
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8158535975410877, 11 Point Precision Recall = [1.0, 0.9629629629629629, 0.9130434782608695, 0.9038461538461539, 0.8484848484848485, 0.7912087912087912, 0.6982758620689655, 0.6666666666666666, 0.6496815286624203, 0.5947368421052631, 0.5816326530612245]
+Printing top 10 results:
+ 1. [1] .Using a trust network to improve top-N recommendation
+ 2. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 3. [1] .Google news personalization: scalable online collaborative filtering
+ 4. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 5. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 6. [1] .Distributed collaborative filtering with domain specialization
+ 7. [1] .Analysis of a low-dimensional linear model under recommendation attacks
+ 8. [1] .Improved recommendation based on collaborative tagging behaviors
+ 9. [1] .A unified approach to building hybrid recommender systems
+ 10. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF]
+abstract_text:system abstract_text:collabor abstract_text:filter abstract_text:recommend
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8153853328280017, 11 Point Precision Recall = [1.0, 0.9130434782608695, 0.9130434782608695, 0.8867924528301887, 0.8484848484848485, 0.797752808988764, 0.7685185185185185, 0.647887323943662, 0.6242424242424243, 0.5885416666666666, 0.5728643216080402]
+Printing top 10 results:
+ 1. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 2. [1] .Using a trust network to improve top-N recommendation
+ 3. [1] .Recommendation based on object typicality
+ 4. [1] .Distributed collaborative filtering with domain specialization
+ 5. [1] .CARES: a ranking-oriented CADAL recommender system
+ 6. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 7. [1] .Google news personalization: scalable online collaborative filtering
+ 8. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 9. [1] .A unified approach to building hybrid recommender systems
+ 10. [1] .TagiCoFi: tag informed collaborative filtering
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:system abstract_text:collaborative abstract_text:filtering abstract_text:recommendation
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.825842158493648, 11 Point Precision Recall = [1.0, 0.9629629629629629, 0.9459459459459459, 0.9019607843137255, 0.8888888888888888, 0.8292682926829268, 0.7314814814814815, 0.6642857142857143, 0.6375, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 2. [1] .Recommendation based on object typicality
+ 3. [1] .Using a trust network to improve top-N recommendation
+ 4. [1] .Google news personalization: scalable online collaborative filtering
+ 5. [1] .Distributed collaborative filtering with domain specialization
+ 6. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 7. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 8. [1] .CARES: a ranking-oriented CADAL recommender system
+ 9. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 10. [1] .A unified approach to building hybrid recommender systems
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25]
+abstract_text:system abstract_text:collabor abstract_text:filter abstract_text:recommend
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8150964942606489, 11 Point Precision Recall = [1.0, 0.9259259259259259, 0.9210526315789473, 0.8846153846153846, 0.8484848484848485, 0.7659574468085106, 0.75, 0.6893939393939394, 0.6296296296296297, 0.5885416666666666, 0.5728643216080402]
+Printing top 10 results:
+ 1. [1] .Using a trust network to improve top-N recommendation
+ 2. [1] .Distributed collaborative filtering with domain specialization
+ 3. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 4. [1] .Google news personalization: scalable online collaborative filtering
+ 5. [1] .Analysis of a low-dimensional linear model under recommendation attacks
+ 6. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 7. [1] .Unified relevance models for rating prediction in collaborative filtering
+ 8. [1] .Unified relevance models for rating prediction in collaborative filtering
+ 9. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 10. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25]
+abstract_text:system abstract_text:collaborative abstract_text:filtering abstract_text:recommendation
+Search Hits :199
+[Search Stats: Precision = 0.5728643216080402, Recall = 1.0, Average Precision = 0.8179044100467191, 11 Point Precision Recall = [1.0, 0.96, 0.9318181818181818, 0.9019607843137255, 0.8484848484848485, 0.7888888888888889, 0.7043478260869566, 0.6666666666666666, 0.6455696202531646, 0.5947368421052631, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Using a trust network to improve top-N recommendation
+ 2. [1] .Google news personalization: scalable online collaborative filtering
+ 3. [1] .Discovery-oriented collaborative filtering for improving user satisfaction
+ 4. [1] .Does a one-size recommendation system fit all? the effectiveness of collaborative filtering based recommendation systems across different domains and search modes
+ 5. [1] .Reasonable tag-based collaborative filtering for social tagging systems
+ 6. [1] .Distributed collaborative filtering with domain specialization
+ 7. [1] .Analysis of a low-dimensional linear model under recommendation attacks
+ 8. [1] .Integrating collaborate and content-based filtering for personalized information recommendation
+ 9. [1] .Improved recommendation based on collaborative tagging behaviors
+ 10. [1] .Unified relevance models for rating prediction in collaborative filtering
+----------------------------------------------------------------------
+Processing Query : systems recommendation systems classification
+----------------------------------------------------------------------
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF]
+abstract_text:system abstract_text:recommend abstract_text:system abstract_text:classif
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5248153259354998, 11 Point Precision Recall = [0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5806451612903226, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Social recommender systems
+ 2. [1] .A design framework for recommender system by incorporating sequential information
+ 3. [0] .SVR-based music mood classification and context-based music recommendation
+ 4. [0] .Usability recommendations in the design of mixed interactive systems
+ 5. [1] .Learning to recommend helpful hotel reviews
+ 6. [0] .A privacy preserving web recommender system
+ 7. [1] .Taxonomy-driven computation of product recommendations
+ 8. [0] .Taking advice from intelligent systems: the double-edged sword of explanations
+ 9. [0] .A framework for choosing a database query language
+ 10. [1] .Classification features for attack detection in collaborative recommender systems
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:system abstract_text:recommendation abstract_text:system abstract_text:classification
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5470023086498434, 11 Point Precision Recall = [0.6111111111111112, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.6067415730337079, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .A design framework for recommender system by incorporating sequential information
+ 2. [0] .SVR-based music mood classification and context-based music recommendation
+ 3. [1] .Social recommender systems
+ 4. [0] .Usability recommendations in the design of mixed interactive systems
+ 5. [0] .Taking advice from intelligent systems: the double-edged sword of explanations
+ 6. [1] .Taxonomy-driven computation of product recommendations
+ 7. [0] .A framework for choosing a database query language
+ 8. [1] .Learning to recommend helpful hotel reviews
+ 9. [0] .A privacy preserving web recommender system
+ 10. [1] .Classification features for attack detection in collaborative recommender systems
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25]
+abstract_text:system abstract_text:recommend abstract_text:system abstract_text:classif
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5072586802107497, 11 Point Precision Recall = [0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [0] .SVR-based music mood classification and context-based music recommendation
+ 2. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 3. [1] .A design framework for recommender system by incorporating sequential information
+ 4. [1] .Taxonomy-driven computation of product recommendations
+ 5. [0] .A framework for choosing a database query language
+ 6. [1] .Social recommender systems
+ 7. [0] .A multimodal sensing system for detection of traumatic brain injury
+ 8. [0] .Determining Mood for a Blog by Combining Multiple Sources of Evidence
+ 9. [1] .A behavioral study of emotions in south indian classical music andits implications in music recommendation systems
+ 10. [1] .Learning to recommend helpful hotel reviews
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25]
+abstract_text:system abstract_text:recommendation abstract_text:system abstract_text:classification
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.548879668746384, 11 Point Precision Recall = [0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6222222222222222, 0.6141304347826086, 0.59375]
+Printing top 10 results:
+ 1. [0] .SVR-based music mood classification and context-based music recommendation
+ 2. [1] .A design framework for recommender system by incorporating sequential information
+ 3. [1] .Taxonomy-driven computation of product recommendations
+ 4. [0] .A framework for choosing a database query language
+ 5. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 6. [1] .Social recommender systems
+ 7. [1] .Learning to recommend helpful hotel reviews
+ 8. [0] .Determining Mood for a Blog by Combining Multiple Sources of Evidence
+ 9. [1] .A behavioral study of emotions in south indian classical music andits implications in music recommendation systems
+ 10. [0] .A multimodal sensing system for detection of traumatic brain injury
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF]
+abstract_text:system abstract_text:recommend abstract_text:system abstract_text:classif
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5291855594232077, 11 Point Precision Recall = [0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.585635359116022, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Social recommender systems
+ 2. [1] .A design framework for recommender system by incorporating sequential information
+ 3. [0] .SVR-based music mood classification and context-based music recommendation
+ 4. [0] .A privacy preserving web recommender system
+ 5. [1] .Taxonomy-driven computation of product recommendations
+ 6. [0] .Taking advice from intelligent systems: the double-edged sword of explanations
+ 7. [1] .Classification features for attack detection in collaborative recommender systems
+ 8. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 9. [0] .Intelligent email: reply and attachment prediction
+ 10. [1] .Learning to recommend helpful hotel reviews
+-----------------------------------
+Similarity ClassicSimilarity
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF]
+abstract_text:system abstract_text:recommendation abstract_text:system abstract_text:classification
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5546271683353979, 11 Point Precision Recall = [0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.6055555555555555, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [1] .Social recommender systems
+ 2. [1] .A design framework for recommender system by incorporating sequential information
+ 3. [0] .SVR-based music mood classification and context-based music recommendation
+ 4. [0] .Taking advice from intelligent systems: the double-edged sword of explanations
+ 5. [1] .Taxonomy-driven computation of product recommendations
+ 6. [0] .A privacy preserving web recommender system
+ 7. [0] .Intelligent email: reply and attachment prediction
+ 8. [1] .Classification features for attack detection in collaborative recommender systems
+ 9. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 10. [0] .Usability recommendations in the design of mixed interactive systems
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25]
+abstract_text:system abstract_text:recommend abstract_text:system abstract_text:classif
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5068275009212516, 11 Point Precision Recall = [0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5803108808290155, 0.5786802030456852, 0.5786802030456852]
+Printing top 10 results:
+ 1. [0] .SVR-based music mood classification and context-based music recommendation
+ 2. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 3. [1] .A design framework for recommender system by incorporating sequential information
+ 4. [1] .Taxonomy-driven computation of product recommendations
+ 5. [1] .Social recommender systems
+ 6. [0] .A framework for choosing a database query language
+ 7. [0] .A multimodal sensing system for detection of traumatic brain injury
+ 8. [0] .Determining Mood for a Blog by Combining Multiple Sources of Evidence
+ 9. [1] .A behavioral study of emotions in south indian classical music andits implications in music recommendation systems
+ 10. [0] .Intelligent email: reply and attachment prediction
+-----------------------------------
+Similarity BM25(k1=1.2,b=0.75)
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25]
+abstract_text:system abstract_text:recommendation abstract_text:system abstract_text:classification
+Search Hits :197
+[Search Stats: Precision = 0.5786802030456852, Recall = 1.0, Average Precision = 0.5500299886835178, 11 Point Precision Recall = [0.6231884057971014, 0.6231884057971014, 0.6231884057971014, 0.6231884057971014, 0.6231884057971014, 0.6231884057971014, 0.6231884057971014, 0.62, 0.6198830409356725, 0.6141304347826086, 0.5906735751295337]
+Printing top 10 results:
+ 1. [0] .SVR-based music mood classification and context-based music recommendation
+ 2. [1] .A design framework for recommender system by incorporating sequential information
+ 3. [0] .Adapting the user context in realtime: tailoring online machine learning algorithms to ambient computing
+ 4. [1] .Taxonomy-driven computation of product recommendations
+ 5. [1] .Social recommender systems
+ 6. [0] .A framework for choosing a database query language
+ 7. [0] .Determining Mood for a Blog by Combining Multiple Sources of Evidence
+ 8. [1] .A behavioral study of emotions in south indian classical music andits implications in music recommendation systems
+ 9. [0] .A multimodal sensing system for detection of traumatic brain injury
+ 10. [0] .Intelligent email: reply and attachment prediction
+----------------------------------------------------------------------
+Mean Average Precision:
+----------------------------------------------------------------------
+MAP = 0.6770329147652565 , for Config : [Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25]
+MAP = 0.6992250795466595 , for Config : [Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25]
+MAP = 0.6876877483492053 , for Config : [Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF]
+MAP = 0.7038410533749286 , for Config : [Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF]
+MAP = 0.697606359768496 , for Config : [Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF]
+MAP = 0.6822885771964384 , for Config : [Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF]
+MAP = 0.6747162204560686 , for Config : [Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25]
+MAP = 0.6975783177493187 , for Config : [Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25]
+----------------------------------------------------------------------
+Averaged 11 Point Precision Recall Values:
+----------------------------------------------------------------------
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = BM25] --> [0.7998396249691586, 0.7701762229653311, 0.7689578993785865, 0.739247439376973, 0.708368315744483, 0.6834139287562283, 0.6745754713316916, 0.6408527784823121, 0.6082314646109983, 0.5868627349492224, 0.5802015109235829, ]
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = BM25] --> [0.8256688963210703, 0.8062249089359064, 0.7988526570048309, 0.7552985969627349, 0.7256624213145952, 0.7043153023259668, 0.659773842917251, 0.6421211233115809, 0.6368176219421234, 0.603552295385354, 0.5884443383261881, ]
+[Configuration: Removing Stop Words = false, Stemmer = English, Similarity = TFIDF] --> [0.8032715848770448, 0.7797317341541469, 0.7797317341541469, 0.7440684914480912, 0.7152324212608149, 0.6973176302614906, 0.6823997427315236, 0.6278251152093655, 0.6068249461085734, 0.5845515814177253, 0.5779643451901588, ]
+[Configuration: Removing Stop Words = false, Stemmer = english_min, Similarity = TFIDF] --> [0.8137929809605001, 0.7936641564838496, 0.7890831048439745, 0.7611054381657893, 0.7420959595959596, 0.719095572449231, 0.6704842665035363, 0.6403931173226475, 0.6236591011743451, 0.5867414756363178, 0.5816785460666474, ]
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = TFIDF] --> [0.8066679379608441, 0.7914778090805911, 0.7914778090805911, 0.7607764858854156, 0.7438233580333781, 0.7150936416365549, 0.6568364616822226, 0.6382651991547368, 0.6227503214445228, 0.5877135622423284, 0.5824476522842639, ]
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = TFIDF] --> [0.8076801440179049, 0.7873997768365201, 0.7779990717836411, 0.7387510339123242, 0.7047955920654069, 0.6895233747790047, 0.6798827104474328, 0.6221893747450313, 0.6068199259605376, 0.5853219239133622, 0.5787100280786988, ]
+[Configuration: Removing Stop Words = true, Stemmer = English, Similarity = BM25] --> [0.7989238740534077, 0.78164405242576, 0.7620989968029985, 0.7377435753502849, 0.6972186951743158, 0.686497351300798, 0.6745754713316916, 0.6404341876613617, 0.6065128993518206, 0.5868627349492224, 0.579463398419698, ]
+[Configuration: Removing Stop Words = true, Stemmer = english_min, Similarity = BM25] --> [0.8263630089717046, 0.8087484035759898, 0.793917435221783, 0.7545775268468204, 0.7274115476647123, 0.7066315628815629, 0.6543003452486211, 0.6415279165279165, 0.6369252810607479, 0.602757237409445, 0.5907206632653061, ]
