@@ -11,7 +11,7 @@ We focused on documents related to "search task" (a field in the xml corpus) 2, 
 
 Team Members
 =============
-1. Kunal Ghosh, Kunal.Ghosh@aalto.fi
+1. Kunal Ghosh, Kunal.Ghosh@aalto.fi (Implemented most of the code)
 2. Jussi K Ojala, Jussi.K.Ojala@aalto.fi
 3. Preeti Lahoti, Preethi.Lahoti@aalto.fi
 4. Shishir Bhattarai, Shishir.Bhattarai@aalto.fi
