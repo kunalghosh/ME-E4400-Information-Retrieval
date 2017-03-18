@@ -1,4 +1,4 @@
-** ME-E4400 - Information Retrieval (2016) - Assignment 2 **
+ME-E4400 - Information Retrieval (2016) - Assignment 2
 =============================================================================================================
 
 Course Specific Information
