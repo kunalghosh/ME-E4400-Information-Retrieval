@@ -1,0 +1,23 @@
+\contentsline {chapter}{Contents}{2}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {2}Search techniques}{3}
+\contentsline {subsection}{\numberline {2.1}Similarities}{3}
+\contentsline {subsubsection}{BM25}{3}
+\contentsline {subsubsection}{TF-IDF}{4}
+\contentsline {subsubsection}{B25 vs TF-IDF}{4}
+\contentsline {subsection}{\numberline {2.2}Stemming}{5}
+\contentsline {subsubsection}{English Stemmer / Porter Stemmer}{5}
+\contentsline {subsubsection}{K-Stemmer}{5}
+\contentsline {subsubsection}{English Minimalist Stemmer}{5}
+\contentsline {subsubsection}{K-Stemmer vs Porter Stemmer vs English Minimalist Stemmer}{5}
+\contentsline {subsection}{\numberline {2.3}Stop Words}{6}
+\contentsline {section}{\numberline {3}Collected statistics}{6}
+\contentsline {subsection}{\numberline {3.1}Interpolated 11-point Precision Recall values}{6}
+\contentsline {subsection}{\numberline {3.2}Average 11 point precision recall Values}{6}
+\contentsline {subsection}{\numberline {3.3}Mean Average Precision (MAP)}{7}
+\contentsline {section}{\numberline {4}Result and Comparison}{7}
+\contentsline {subsection}{\numberline {4.1}Anomalies in Document Collection}{9}
+\contentsline {section}{\numberline {5}Conclusion}{10}
+\contentsline {section}{\numberline {6}Contributions}{10}
+\contentsline {chapter}{References}{11}
